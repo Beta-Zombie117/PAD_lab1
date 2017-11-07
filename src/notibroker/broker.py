@@ -50,7 +50,7 @@ def run_server(hostname='localhost', port=14141, loop=None):
     server = loop.run_until_complete(coro)
     LOGGER.info('Serving on %s', server.sockets[0].getsockname())
     LOGGER.info('Press Ctrl + C to stop the application')
-    try:d
+    try:
         loop.run_forever()
     except KeyboardInterrupt:
         pass
